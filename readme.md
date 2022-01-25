@@ -109,18 +109,22 @@ Submit a screenshot of your report and a screenshot of proof that the alert has 
    - [Admin Logins](resources/Administrator_logs.csv)
 
 2. When did the brute force attack occur?
+- The attack started a 9:00 AM on Friday February 21st, 2020 and lasted for 5 hours.
    - Hints:
      - Look for the `name` field to find failed logins.
      - Note the attack lasted several hours.
 
       
 3. Determine a baseline of normal activity and a threshold that would alert if a brute force attack is occurring.
+- The baseline of normal activity is around 20 and I set my threshold at 50
 
 4. Design an alert to check the threshold every hour and email the SOC team at SOC@vandalay.com if triggered. 
 
 Submit the answers to the questions about the brute force timing, baseline and threshold. Additionally, provide a screenshot as proof that the alert has been created.
  
- 
+ ![Administrators Failed Logins](https://user-images.githubusercontent.com/90003359/151052312-988f461f-1ded-40e2-9a7e-174810e2d564.png)
+ ![Brute Force Attack Alert on Administrators](https://user-images.githubusercontent.com/90003359/151052341-29071121-d013-41d3-9fb6-729a9687d315.png)
+
 ### Your Submission
   
 In a word document, provide the following:
