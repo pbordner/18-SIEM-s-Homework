@@ -54,7 +54,7 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 
 2. Using the `eval` command, create a field called `ratio` that shows the ratio between the upload and download speeds.
    - Hint: The format for creating a ratio is: `| eval new_field_name = 'fieldA'  / 'fieldB'`
--source="server_speedtest.csv" host="server_speedtest" sourcetype="csv" | eval ratio='UPLOAD_MEGABITS' / 'DOWNLOAD_MEGABITS'
+- source="server_speedtest.csv" host="server_speedtest" sourcetype="csv" | eval ratio='UPLOAD_MEGABITS' / 'DOWNLOAD_MEGABITS'
   
 ![Speed Test File Eval](https://user-images.githubusercontent.com/90003359/151040129-e48307dd-aa0c-4a4c-b4c0-b04db9b0d2db.png)
 
@@ -67,6 +67,7 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
   
    Hint: Use the following format when for the `table` command: `| table fieldA  fieldB fieldC`
 - source="server_speedtest.csv" host="server_speedtest" sourcetype="csv" | eval ratio='UPLOAD_MEGABITS' / 'DOWNLOAD_MEGABITS' | table _time IP_ADDRESS DOWNLOAD_MEGABITS UPLOAD_MEGABITS ratio
+
 4. Answer the following questions:
 
     - Based on the report created, what is the approximate date and time of the attack? 
@@ -92,7 +93,8 @@ Submit a screen shot of your report and the answer to the questions above.
 2. Create a report that shows the `count` of critical vulnerabilities from the customer database server.
    - The database server IP is `10.11.36.23`.
    - The field that identifies the level of vulnerabilities is `severity`.
-- source="nessus_logs.csv" host="nessus_logs" sourcetype="csv" dest_ip="10.11.36.23" severity=critical | stats count by severity      
+- source="nessus_logs.csv" host="nessus_logs" sourcetype="csv" dest_ip="10.11.36.23" severity=critical | stats count by severity
+      
 3. Build an alert that monitors every day to see if this server has any critical vulnerabilities. If a vulnerability exists, have an alert emailed to `soc@vandalay.com`.
 
 Submit a screenshot of your report and a screenshot of proof that the alert has been created.
@@ -124,6 +126,7 @@ Submit a screenshot of your report and a screenshot of proof that the alert has 
 
 Submit the answers to the questions about the brute force timing, baseline and threshold. Additionally, provide a screenshot as proof that the alert has been created.
  - source="Administrator_logs.csv" host="Admin Logins" sourcetype="csv" name="An account failed to log on"
+ 
  ![Administrators Failed Logins](https://user-images.githubusercontent.com/90003359/151052312-988f461f-1ded-40e2-9a7e-174810e2d564.png)
  ![Brute Force Attack Alert on Administrators](https://user-images.githubusercontent.com/90003359/151052341-29071121-d013-41d3-9fb6-729a9687d315.png)
 
