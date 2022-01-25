@@ -71,9 +71,9 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 4. Answer the following questions:
 
     - Based on the report created, what is the approximate date and time of the attack? 
-      1. 2/23/2020 11:30:00.000 PM Is the approximate date and time.
+      A. 2/23/2020 11:30:00.000 PM Is the approximate date and time.
     - How long did it take your systems to recover?
-      2. It took approximatley 9 hours for the system to recover.
+      B. It took approximatley 9 hours for the system to recover.
       
 ![Speed Test File eval and tables](https://user-images.githubusercontent.com/90003359/151040190-2f5690a9-95f9-4fd9-b1c5-ed62371262a9.png)
 
@@ -113,14 +113,14 @@ Submit a screenshot of your report and a screenshot of proof that the alert has 
    - [Admin Logins](resources/Administrator_logs.csv)
 
 2. When did the brute force attack occur?
-- The attack started a 9:00 AM on Friday February 21st, 2020 and lasted for 5 hours.
+A. The attack started a 9:00 AM on Friday February 21st, 2020 and lasted for 5 hours.
    - Hints:
      - Look for the `name` field to find failed logins.
      - Note the attack lasted several hours.
 
       
 3. Determine a baseline of normal activity and a threshold that would alert if a brute force attack is occurring.
-- The baseline of normal activity is around 20 and I set my threshold at 50
+A. The baseline of normal activity is around 20 and I set my threshold at 50
 
 4. Design an alert to check the threshold every hour and email the SOC team at SOC@vandalay.com if triggered. 
 
