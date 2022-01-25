@@ -54,7 +54,7 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 
 2. Using the `eval` command, create a field called `ratio` that shows the ratio between the upload and download speeds.
    - Hint: The format for creating a ratio is: `| eval new_field_name = 'fieldA'  / 'fieldB'`
-
+- source="server_speedtest.csv" host="server_speedtest" sourcetype="csv"| eval ratio='UPLOAD_MEGABITS'/'DOWNLOAD_MEGABITS'
 ![Speed Test File Eval](https://user-images.githubusercontent.com/90003359/151040129-e48307dd-aa0c-4a4c-b4c0-b04db9b0d2db.png)
 
 3. Create a report using the Splunk's `table` command to display the following fields in a statistics report:
@@ -65,13 +65,14 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
     - `ratio`
   
    Hint: Use the following format when for the `table` command: `| table fieldA  fieldB fieldC`
-
+- source="server_speedtest.csv" host="server_speedtest" sourcetype="csv"| eval ratio='UPLOAD_MEGABITS'/'DOWNLOAD_MEGABITS'| table _time IP_ADDRESS DOWNLOAD_MEGABITS UPLOAD_MEGABITS ratio
 4. Answer the following questions:
 
     - Based on the report created, what is the approximate date and time of the attack? 
       1. 2/23/2020 11:30:00.000 PM Is the approximate date and time.
     - How long did it take your systems to recover?
       2. It took approximatley 9 hours for the system to recover.
+      
 ![Speed Test File eval and tables](https://user-images.githubusercontent.com/90003359/151040190-2f5690a9-95f9-4fd9-b1c5-ed62371262a9.png)
 
 Submit a screen shot of your report and the answer to the questions above.
@@ -90,7 +91,7 @@ Submit a screen shot of your report and the answer to the questions above.
 2. Create a report that shows the `count` of critical vulnerabilities from the customer database server.
    - The database server IP is `10.11.36.23`.
    - The field that identifies the level of vulnerabilities is `severity`.
-      
+- source="nessus_logs.csv" host="nessus_logs" sourcetype="csv" dest_ip="10.11.36.23" severity=critical| stats count by severity      
 3. Build an alert that monitors every day to see if this server has any critical vulnerabilities. If a vulnerability exists, have an alert emailed to `soc@vandalay.com`.
 
 Submit a screenshot of your report and a screenshot of proof that the alert has been created.
