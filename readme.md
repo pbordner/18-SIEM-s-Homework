@@ -68,8 +68,10 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 
 4. Answer the following questions:
 
-    - Based on the report created, what is the approximate date and time of the attack?
+    - Based on the report created, what is the approximate date and time of the attack? 
+      1. 2/23/2020 11:30:00.000 PM Is the approximate date and time.
     - How long did it take your systems to recover?
+      2. It took approximatley 9 hours for the system to recover.
 ![Speed Test File eval and tables](https://user-images.githubusercontent.com/90003359/151040190-2f5690a9-95f9-4fd9-b1c5-ed62371262a9.png)
 
 Submit a screen shot of your report and the answer to the questions above.
@@ -92,6 +94,8 @@ Submit a screen shot of your report and the answer to the questions above.
 3. Build an alert that monitors every day to see if this server has any critical vulnerabilities. If a vulnerability exists, have an alert emailed to `soc@vandalay.com`.
 
 Submit a screenshot of your report and a screenshot of proof that the alert has been created.
+![Nessus Scan Results Count Severity Report](https://user-images.githubusercontent.com/90003359/151046762-51dab79d-81f4-40b8-bb28-b64e09a0813a.png)
+![Nessus Scan Result Alert](https://user-images.githubusercontent.com/90003359/151046796-3fc50f99-f1c7-4bbc-8353-0d10de0282e5.png)
 
 
 ### Step 3: Drawing the (base)line
