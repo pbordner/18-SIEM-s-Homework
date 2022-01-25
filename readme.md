@@ -54,7 +54,8 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
 
 2. Using the `eval` command, create a field called `ratio` that shows the ratio between the upload and download speeds.
    - Hint: The format for creating a ratio is: `| eval new_field_name = 'fieldA'  / 'fieldB'`
-- source="server_speedtest.csv" host="server_speedtest" sourcetype="csv" | eval ratio='UPLOAD_MEGABITS' / 'DOWNLOAD_MEGABITS'
+-source="server_speedtest.csv" host="server_speedtest" sourcetype="csv" | eval ratio='UPLOAD_MEGABITS' / 'DOWNLOAD_MEGABITS'
+  
 ![Speed Test File Eval](https://user-images.githubusercontent.com/90003359/151040129-e48307dd-aa0c-4a4c-b4c0-b04db9b0d2db.png)
 
 3. Create a report using the Splunk's `table` command to display the following fields in a statistics report:
